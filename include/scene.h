@@ -1,11 +1,11 @@
 #ifndef SCENE
 #define SCENE
 
-#ifndef SHAPE
-    #include "shape.h"
-#endif //SHAPE
+#ifndef PRIMITIVE
+    #include "primitive.h"
+#endif //PRIMITIVE
 
-#ifndef LiGHT
+#ifndef LIGHT
     #include "light.h"
 #endif //LIGHT
 
@@ -13,12 +13,13 @@
 
 class Scene {
     public:
-        Scene();
-        std::vector<Shape *> shapes;
-        std::vector<Light *> lights;
+        Primitive *aggregate;
+        vector<Light *> lights;
         
-        void add_shape(Shape *shape) { shapes.push_back(shape); }
-        void add_light(Light *light) { lights.push_back(light); }
+        bool Intersect(const Ray &ray, Intersection *itsc);
+        bool IntersectP(const Ray &ray);
+        
 };
+
 
 #endif //SCENE

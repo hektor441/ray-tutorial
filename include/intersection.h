@@ -1,21 +1,7 @@
-#ifndef ITSC
-#define ITSC
+#ifndef INTERSECTION
+#define INTERSECTION
 
-#ifndef VECTOR3
-    #include "vector3.h"
-#endif // VECTOR3
+class Intersection {};
 
-class Material;
 
-class Intersection {
-    public:
-        float tmin;
-        Vector3 point;
-        Vector3 normal;
-        Material *material;
-        
-        // constructor
-        Intersection();
-};
-
-#endif //ITSC
+#endif //INTERSECTION
