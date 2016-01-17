@@ -19,6 +19,7 @@ class Scene {
         bool Intersect(const Ray &ray, Intersection *itsc);
         bool IntersectP(const Ray &ray);
         
+        // ADD: Bounding box, is it really required? (p. 24)
 };
 
 

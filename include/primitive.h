@@ -14,7 +14,7 @@
 class Primitive {
     Shape shape;
     Material material;
-    /////// TODO: p 185
+    /////// TODO: rewrite it all p 185
     public:
         // Constructor
         Primitive(Shape, Material);
